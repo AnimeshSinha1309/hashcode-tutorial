@@ -9,8 +9,8 @@ problems, and the boilerplate code needed for the same.
 
 ### Greedy Graph
 
-* a_example: 2
-* b_lovely_landscapes: 1563
-* c_memorable_moments: 1456
-* d_pet_pictures: 362167
-* e_shiny_selfies: 282741
+* a_example: 2 (Manual)
+* b_lovely_landscapes: 1935 (Simulated Annealing)
+* c_memorable_moments: 1533 (Online Greedy)
+* d_pet_pictures: 362167 (Greedy Graph)
+* e_shiny_selfies: 317730 (Online Greedy)

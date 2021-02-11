@@ -2,6 +2,8 @@ import os
 import sys
 import random
 
+input_files = ["a_example", "b_lovely_landscapes", "c_memorable_moments", "d_pet_pictures", "e_shiny_selfies"]
+
 
 def set_seed():
     seed = sys.argv[1] if len(sys.argv) > 1 else 42
