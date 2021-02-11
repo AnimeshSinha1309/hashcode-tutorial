@@ -1,16 +1,13 @@
 import random
 import typing
-
 import utils
-
-input_files = ["a_example", "b_lovely_landscapes",
-               "c_memorable_moments", "d_pet_pictures", "e_shiny_selfies"]
 
 TRIES_VERTICAL_MATCH = 1000
 TRIES_HORIZONTAL_MATCH = 1000
 
 random.seed(42)  # reproducible runs
 
+input_files = ["a_example", "b_lovely_landscapes", "c_memorable_moments", "d_pet_pictures", "e_shiny_selfies"]
 
 def separate_horizontal_vertical(alignment_values):
     horizontal_image_idx, vertical_image_idx = list(), list()
