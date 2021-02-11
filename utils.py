@@ -52,9 +52,9 @@ def score(filename, solution):
 
 
 def slide_score(tags, u, v):
-    x = tags[u] if type(u) is int else \
+    x = tags[u] if type(u) is not tuple else \
         tags[u[0]] | tags[u[1]]
-    y = tags[v] if type(v) is int else \
+    y = tags[v] if type(v) is not tuple else \
         tags[v[0]] | tags[v[1]]
     overlap = len(x & y)
     return min(overlap, len(x) - overlap, len(y) - overlap)
@@ -70,7 +70,7 @@ def submit(filename, solution):
     with open(filename, 'w') as f:
         f.write(str(len(solution)) + "\n")
         for item in solution:
-            if type(item) is int:
-                f.write(str(item) + "\n")
-            else:
+            if type(item) is tuple:
                 f.write(str(item[0]) + " " + str(item[1]) + "\n")
+            else:
+                f.write(str(item) + "\n")
