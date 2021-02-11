@@ -11,6 +11,6 @@ problems, and the boilerplate code needed for the same.
 
 * a_example: 2
 * b_lovely_landscapes: 1563
-* c_memorable_moments: 1179
-* e_shiny_selfies: 282741
+* c_memorable_moments: 1456
 * d_pet_pictures: 362167
+* e_shiny_selfies: 282741
