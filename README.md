@@ -14,3 +14,16 @@ problems, and the boilerplate code needed for the same.
 * e_shiny_selfies: 317730 (Online Greedy)
 
 Final Score = 894111
+
+## So what rank would I get?
+
+Effective World Rank: *363*
+
+Rank in purely Indian teams: *10*
+
+
+To be a World Finalist: 1063560;
+Need to gain atleast 169449 points.
+
+To be a World Finalist: 1063560;
+Need to gain atleast 169449 points.
