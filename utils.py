@@ -2,9 +2,10 @@ import os
 import sys
 import random
 
+
 def set_seed():
-    SEED = sys.argv[1] if len(sys.argv) > 1 else 42
-    random.seed(SEED)  # reproducible runs
+    seed = sys.argv[1] if len(sys.argv) > 1 else 42
+    random.seed(seed)  # reproducible runs
 
 
 def read_input(filename):

@@ -9,6 +9,7 @@ random.seed(42)  # reproducible runs
 
 input_files = ["a_example", "b_lovely_landscapes", "c_memorable_moments", "d_pet_pictures", "e_shiny_selfies"]
 
+
 def separate_horizontal_vertical(alignment_values):
     horizontal_image_idx, vertical_image_idx = list(), list()
     for idx, alignment in enumerate(alignment_values):
