@@ -11,14 +11,14 @@ utils.set_seed()
 input_files = ["a_example", "b_lovely_landscapes", "c_memorable_moments", "d_pet_pictures", "e_shiny_selfies"]
 
 TRIES_VERTICAL_MATCH = 50
-TRIES_VERTICAL_SLIDE_MATCH = 1000
+TRIES_VERTICAL_SLIDE_MATCH = 250
 
 
 def online_arrange_slides(horizontal_image_idx, vertical_image_idx, tag_data):
     # list of slides of either two V photos or one H photos EACH
     result = []
 
-    total_slides, current_slides = len(vertical_image_idx) // 2 + len(horizontal_image_idx), 0
+    total_slides = len(vertical_image_idx) // 2 + len(horizontal_image_idx)
     progress_bar = tqdm.tqdm(total=total_slides)
 
     while vertical_image_idx or horizontal_image_idx:
@@ -64,15 +64,14 @@ def online_arrange_slides(horizontal_image_idx, vertical_image_idx, tag_data):
             result.append(best_slide)
             vertical_image_idx.remove(best_slide[0])
             vertical_image_idx.remove(best_slide[1])
-        current_slides += 1
-        progress_bar.update(current_slides)
+        progress_bar.update(1)
 
     progress_bar.close()
     return result
 
 
 if __name__ == "__main__":
-    filename = input_files[2]
+    filename = input_files[4]
     alignments, tags = utils.read_input(filename)
     horizontal_images, vertical_images = greedy_graph.separate_horizontal_vertical(alignments)
     solution = online_arrange_slides(horizontal_images, vertical_images, tags)

@@ -20,6 +20,20 @@ def read_input(filename):
     return alignment, tags
 
 
+def solution_loader(filename):
+    output_file = f"output/{filename}.txt"
+    with open(output_file, "r") as f:
+        n = int(f.readline())
+        solution = []
+        for _ in range(n):
+            s = f.readline().split(" ")
+            if len(s) == 1:
+                solution.append(int(s[0]))
+            else:
+                solution.append((int(s[0]), int(s[1])))
+    return solution
+
+
 def score(filename, solution):
     alignment, tags = read_input(filename)
     points = 0
